@@ -1,19 +1,26 @@
-﻿// ConsoleApplication6.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-//
 
 #include <iostream>
+
 using namespace std;
-int main()
-{
-	int n;
-	cout << "Введите проверяемое число" << endl;
-	cin >> n;
-	for (i = 2; i < sqrt(n); i++) {
-		if (n % i == 0) {
-			cout << "Данное число не является простым";
+
+int fact(int a, int res = 1) {
+	if (a == 1) return  res;
+	else return fact(a - 1, res * a);
+
+}
+
+int main() {
+	setlocale(LC_ALL, "Russian");
+	int a;
+	cout << "a=";
+	cin >> a;
+	if (a >= 0) {
+			cout << fact(a);
 			return 0;
-		}
 	}
-	cout << "Данное число не является простым";
+	else
+	{
+		cout << "Ошибка : введите целое положительное число";
+	}
 	return 0;
 }
