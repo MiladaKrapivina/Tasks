@@ -20,20 +20,32 @@ int main()
 	x = -b / (2 * a);
 	x0 = -c / b;
 	setlocale(LC_ALL, "Russian");
-		if (a != 0)
-		{
-			if (D < 0) cout << "Корней нет" << "\n";
-			
-
-			if (D == 0) cout << "x=" << x << "\n";
-			if(D>0)			{
-				cout << "x1=" << x1 << "\n";
-				cout << "x2=" << x2;
-			}
-			
+	if (a != 0)
+	{
+		if (D < 0){ cout << "Корней нет" << "\n";
+		return  0;
 		}
-		else if(b!=0) cout << "x" << x;
-		if (a == 0 && b == 0 && c == 0) cout << "Бесконечное множество решений";
-		if (a == 0 && b == 0 && c != 0) cout << "Бред какой-то";
+
+		if (D == 0) {
+			cout << "x=" << x << "\n";
+			return 0;
+		}
+		if (D > 0) {
+			cout << "x1=" << x1 << "\n";
+			cout << "x2=" << x2;
+			return 0;
+		}
+
+	}
+	else if (b != 0) {
+		cout << "x=" << x0;
+		return 0;
+	}
+	else if ( c == 0) {
+		cout << "Бесконечное множество решений";
+		return 0;
+	}
+	else 	 cout << "Решений нет";
 	return 0;
 }
+
