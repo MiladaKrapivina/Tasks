@@ -3,8 +3,6 @@
 #include <time.h>
 using namespace std;
 
-
-
 double exponentiation(double a, int b, double result = 1)
 {
 	if (b == 0) {
