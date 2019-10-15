@@ -58,8 +58,6 @@ int main() {
 	double weight, height;
 	cout << "Укажите вес в килограммах и рост в метрах";
 	cin >> weight >> height;
-
-	BMI( weight,  height);
 	
 	printBMI(BMI(weight, height));
 	   	  
