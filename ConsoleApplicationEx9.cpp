@@ -1,11 +1,11 @@
-﻿#include <iostream>
+#include <iostream>
 #include <clocale>
 #include <time.h>
 using namespace std;
 int main()
 {
-	setlocale(LC_ALL,"Russian");
-	cout<<"Игра \"Угадай число\" "<<endl;
+	setlocale(LC_ALL, "Russian");
+	cout << "Игра \"Угадай число\" " << endl;
 	srand(time(NULL));
 	int num, n, v;
 	do {
@@ -14,7 +14,9 @@ int main()
 		bool flag = false;
 		do {
 			if (i == 5) {
-				flag = true; break;
+				flag = true;
+				cout << "Вы проиграли.Загаданное число:" << num;
+				break;
 			}
 			cout << "Ваше число" << endl;
 			cin >> n;
@@ -23,22 +25,24 @@ int main()
 				break;
 			}
 			else if (n < num) {
-				cout << "Загаданное число больше"<<endl;
+				cout << "Загаданное число больше" << endl;
 			}
 			else {
-				cout << "Загаданное число меньше"<<endl;
+				cout << "Загаданное число меньше" << endl;
 			}
 			i++;
 
-		} while (!flag );
-		cout << "Загаданное число:" << num << " Хотите сыграть ещё? Нажмите 1, если да "; 
+		} while (!flag);
+		cout<< " Хотите сыграть ещё? Нажмите 1, если да ";
 		cin >> v;
 
-	} while (v==1);
+	} while (v == 1);
 
 
 	return 0;
 }
+
+
 
 
 
