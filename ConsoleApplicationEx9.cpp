@@ -14,7 +14,6 @@ int main()
 		bool flag = false;
 		do {
 			if (i == 5) {
-				flag = true;
 				cout << "Вы проиграли.Загаданное число:" << num;
 				break;
 			}
@@ -31,19 +30,10 @@ int main()
 				cout << "Загаданное число меньше" << endl;
 			}
 			i++;
-
 		} while (!flag);
 		cout<< " Хотите сыграть ещё? Нажмите 1, если да ";
 		cin >> v;
 
 	} while (v == 1);
-
-
 	return 0;
 }
-
-
-
-
-
-
