@@ -25,7 +25,7 @@ int main()
 		}
 		if (b < 0)
 		{
-			cout << "Ошибка: делить на 0 нельзя";
+			cout << "Ошибка";
 		}
 	}
 	else
@@ -37,7 +37,7 @@ int main()
 		} 
 		
 		else 
-			if (b = 0) cout << 1;
+			if (b == 0) cout << 1;
 		 else {
 			for (int i = 1; i <= -b; i++) {
 				res /= a;
