@@ -2,13 +2,9 @@
 и в этой же строке выведите ответ.
 Если русский текст отображается не корректно, то установите русскую локаль(русский язык) командой: setlocale(LC_ALL, "Russian"); 
 Если появится ошибка, подключите библиотеку clocale.*/
-
 #include <iostream>
 #include <clocale>
 using namespace std;
-
-
-
 int main()
 {
 	setlocale(LC_ALL, "Russian");
@@ -16,9 +12,4 @@ int main()
 	cout << " Результат вычисления выражения 2+2*2 = " << a;
 	system ("pause");
 	return 12;
-
 }
-
-
-
-
