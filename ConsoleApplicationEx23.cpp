@@ -1,40 +1,32 @@
 #include <iostream>
 #include <string>
 using namespace std;
-bool flag=true;
-void proverka(string s1) {
+ bool proverka(char s1[]) {
 	string s;
-	for (int n = 0; n < s1.length(); n++) {
-	   if ((s1[n]>=48 && s1[n]<=57)|| (s1[n] >= 65 && s1[n] <= 90)|| (s1[n] >= 97 && s1[n] <=122)) {
-		 if (s1[n] >= 48 && s1[n] <= 57) {
-			s+=s1[n];
-		 }else 
-			if (s1[n] >= 65 && s1[n] <= 90) {
-				s+=s1[n];
-			}else s+=s1[n]-32;
-	   }
-    }
+	for (int n = 0; n < sizeof(s1); n++) {
+			if (isdigit(s1[n])) {
+				s += s1[n];
+			}
+			else
+			if (isalpha(s1[n])) {
+				toupper(s1[n]);
+					s += s1[n];
+			}
+	}
 	int len = s.length();
-	if (len == 0) { 
-		flag = false; 
-		return;
-	}
+	if (len <= 1) return false ;
 	for (int i = 0; i <= len / 2; i++) {
-		if (s[i] != s[len-i-1]) {
-			flag = false;
-		}
+		if (s[i] != s[len - i - 1]) return false;
 	}
+	return true; 
 }
 int main() {
 	setlocale(LC_ALL, "Russian");
-	string s1;
+	char s1 [20];
 	cout << "Введите проверяемую строку";
-	cin>>  s1;
-	proverka( s1);
-	if (flag) {
+	cin.getline(s1, 20);
+	if (proverka(s1)) {
 		cout << "Палиндром";
-	}
-	else cout << "Не палиндром";
-	
+	}else  cout << "Не палиндром";
 	return 0;
 }
