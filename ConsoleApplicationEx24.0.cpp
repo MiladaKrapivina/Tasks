@@ -56,7 +56,7 @@ int main() {
 	else cout << " Равны";
 	
 	if (!strstr_(ll1, ll2) == nullptr)
-		cout << *strstr_(ll1, ll2) - ll1[0] - 1;
+		cout << strstr_(ll1, ll2) - *ll1[0] - 1;
 	else cout << -1;
 
     cout << strcat1(ll1, ll2);
