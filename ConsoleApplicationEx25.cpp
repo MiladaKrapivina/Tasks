@@ -10,7 +10,7 @@ void sort(Student* stud) {
 	int size = 9;
 		for (int i = size; i >= 0; i--) {
 			for (int j = 0; j < i - 1; j++) {
-				if (_strcmpi(stud[i].name, stud[j].name) < 0) {
+				if (strcmpi(stud[i].name, stud[j].name) < 0) {
 					Student temp = stud[i];
 					stud[i] = stud[j];
 					stud[j] =temp;
